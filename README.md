@@ -27,19 +27,20 @@ sudo apt-get install libgd3
 
 ### MosaicMaker
 
-This release comes with the node modules dependencies included for convenience,
-and __should not require running the npm installer__.
+From within this root directory:
+```bash
+npm install
+```
 
-If you choose to, remember to
-patch the node GD binding module:
+If you're having issues running the test suite, patch the node GD binding module:
+
+Apply .__/node-gd.patch__ inside of the
+__node_modules/node-gd__ directory.
 
 ```bash
 cd node_modules/node-gd
 patch -p0 << ../../node-gd.patch
 ```
-apply .__/node-gd.patch__ inside of the
-__node_modules/node-gd__ directory.
-
 
 ## Running
 
