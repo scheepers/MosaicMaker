@@ -32,16 +32,6 @@ From within this root directory:
 npm install
 ```
 
-If you're having issues running the test suite, patch the node GD binding module:
-
-Apply .__/node-gd.patch__ inside of the
-__node_modules/node-gd__ directory.
-
-```bash
-cd node_modules/node-gd
-patch -p0 << ../../node-gd.patch
-```
-
 ## Running
 
 From within this directory run:
@@ -57,8 +47,8 @@ npm run-script mosaic -- ./mona.jpg ./palettes/accordion 120 40
 ```
 
 Where:
-  * Relative or absolute path to source image.
-  * PaletteName may be any of the directory names within the ./palette
+  * ./source/image.jpg: Relative or absolute path to source image.
+  * PaletteName: be any of the directory names within the ./palette
     directory, or a path to  directory containg palette images.
     (Only the accordion directory from the original resource pack is included to
     conserve space, please feel free to add more)
@@ -76,4 +66,13 @@ Where:
 From within this directory run:
 ```bash
 npm test
+```
+If you're having issues running the test suite, patch the node GD binding module:
+
+Apply .__/node-gd.patch__ inside of the
+__node_modules/node-gd__ directory.
+
+```bash
+cd node_modules/node-gd
+patch -p0 << ../../node-gd.patch
 ```
