@@ -1,0 +1,114 @@
+/**
+ * @file Mosaic.test.js
+ * @description Tests the Mosaic object.
+ */
+"use strict"
+
+
+const
+  Image = require('../Image'),
+  MosaicMaker = require('../MosaicMaker'),
+  testDir = './core/test/images'
+
+
+// describe('MosaicMaker initiation and destruction',
+//   () => {
+
+//     var mosaicMaker
+
+//     beforeEach(() => mosaicMaker = new MosaicMaker())
+
+//     test('Create MosaicMaker',
+//       () => {
+//         expect(typeof mosaicMaker.palettes).toBe('object')
+//         expect(Object.keys(mosaicMaker.palettes).length).toBe(0)
+//       }
+//     )
+
+//     test('Destroy MosaicMaker',
+//       (done) => {
+
+//         (
+//           async () => {
+
+//             await mosaicMaker.loadPalette(testDir)
+//             await mosaicMaker.destroy(
+//               () => {
+//                 expect(Object.keys(mosaicMaker.palettes).length).toBe(0)
+//                 expect(Object.keys(mosaicMaker.slices).length).toBe(0)
+//                 done()
+//               }
+//             )
+//           }
+//         )()
+//       }
+//     )
+
+//     afterEach(
+//       (done) => {
+//         (
+//           async () => {
+//             await mosaicMaker.destroy(done)
+//           }
+//         )()
+//       }
+//     )
+//   }
+// )
+
+// describe('Test palette loading',
+//   () => {
+
+//     const
+//       testPalettes = {
+//         [testDir]: [4],
+//         'camera': [50],
+//         'brain': [98]
+//       },
+//       paletteNames = Object.keys(testPalettes),
+//       strategies = [
+//         Image.LINEAR_STRATEGY/*,
+//         Image.QUADRATIC_STRATEGY*/
+//       ]
+
+//     jest.setTimeout(10000)
+
+//     strategies.forEach(
+//       (strategy) => {
+//         paletteNames.forEach(
+//           (paletteName, paletteIndex) => {
+//             test(
+//               `Load ${paletteName} palette ` +
+//               `using ${strategy} averaging`,
+//               (done) => {
+
+//                 (
+//                   async (paletteName, paletteIndex, strategy) => {
+
+//                     var mosaicMaker = new MosaicMaker()
+
+//                     await mosaicMaker.loadPalette(
+//                       paletteName,
+//                       true,
+//                       Image[strategy]
+//                     )
+
+//                     expect(typeof mosaicMaker.palettes).toBe('object')
+//                     expect(typeof mosaicMaker.palettes[paletteName])
+//                       .toBe('object')
+//                     expect(typeof mosaicMaker.palettes[paletteName][strategy])
+//                       .toBe('object')
+//                     expect(Object.keys(mosaicMaker.palettes).length)
+//                       .toBe(1)
+
+//                     mosaicMaker.destroy(done)
+//                   }
+//                 )(paletteName, paletteIndex, strategy)
+//               }
+//             )
+//           }
+//         )
+//       }
+//     )
+//   }
+// )
