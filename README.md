@@ -15,7 +15,7 @@ given target images.
 
 ### GD Graphics library
 
-* To install GD on debian systems:
+* To install GD on debian systems, from within a terminal, run:
 ```bash
 sudo apt-get install libgd3
 ```
@@ -27,14 +27,14 @@ sudo apt-get install libgd3
 
 ### MosaicMaker
 
-From within this root directory:
 ```bash
+cd MosaicMaker
 npm install
 ```
 
 ## Running
 
-From within this directory run:
+Within a terminal, run:
 ```bash
 npm run-script mosaic -- ./source/image.jpg ./path/to/palette/directory|paletteName columns rows [linear|quadratic]
 ```
