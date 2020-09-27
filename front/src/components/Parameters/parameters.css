@@ -1,0 +1,169 @@
+/* Parameters section style */
+
+.parameters .wrapper {
+  justify-content: space-between;
+  border: 1px solid #eee;
+  border-radius: 2.5px;
+  padding: 10px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.parameters .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/* Source & Palette columns */
+
+
+@media(min-width: 1024px) {
+  .parameters .wrapper .column {
+    width: 50%;
+  }
+}
+
+@media(max-width: 1023px) {
+  .parameters .wrapper {
+    flex-flow: column;
+  }
+  .parameters .wrapper .source.column {
+    width: 100%;
+    flex: 0 1 auto;
+  }
+  .parameters .wrapper .palette.column {
+    width: 100%;
+    flex: 1 0 auto;
+  }
+}
+
+.parameters .wrapper h1 {
+  font-family: Julius Sans One;
+  color: #555;
+  text-shadow: 0 2px #33333333;
+}
+
+/* Cutup Image */
+
+.parameters .wrapper h1.source {
+  margin-top: 0;
+}
+
+.parameters .wrapper .mosaic-cutup-wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 1em 20px 1em 0;
+}
+
+.parameters .wrapper .mosaic-cutup-wrapper .mosaic-cutup {
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.parameters .wrapper .mosaic-cutup-wrapper .sliders{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+}
+
+.parameters .wrapper .mosaic-cutup-wrapper .slider-wrapper{
+  position: absolute;
+  border-radius: 30px;;
+  background-color: #ffffffcc;
+  width: auto;
+}
+
+.parameters .wrapper .mosaic-cutup-wrapper .column-slider-wrapper.slider-wrapper{
+  padding: 0 10px;
+  bottom: 0;
+  left:0;
+  right: 30px;
+}
+
+.parameters .wrapper .mosaic-cutup-wrapper .row-slider-wrapper.slider-wrapper{
+  padding: 10px 0;
+  top: 0;
+  right: 0;
+  bottom: 30px;
+}
+
+.parameters .wrapper .mosaic-cutup-wrapper .grid-line{
+  position: absolute;
+  border: 1px dashed;
+  border-top-color: #00FF00;
+  border-left-color: #00FF00;
+  border-bottom-color: #000;
+  border-right-color: #000;
+}
+
+.parameters .wrapper .mosaic-cutup-wrapper .grid-column.grid-line{
+  border-style: none dotted;
+  top: 0;
+  bottom: 0;
+  width: 0;
+}
+.parameters .wrapper .mosaic-cutup-wrapper .grid-row.grid-line{
+  border-style: dotted none;
+  left: 0;
+  right: 0;
+  height: 0;
+}
+
+/* selects */
+
+.parameters .wrapper .MuiInputBase-root {
+  min-width: 70%;
+  max-width: 70%;
+}
+
+.parameters .wrapper .MuiFormControlLabel-root {
+  box-sizing: border-box;
+  padding: 0 10px;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.parameters .wrapper .MuiSelect-select, .parameters .wrapper .MuiFormControlLabel-label {
+  font-size: 80%;
+  font-family: 'Comfortaa';
+}
+
+.parameters .wrapper .MuiSelect-root {
+  padding-left: 10px;
+}
+
+/* palette */
+
+.parameters .wrapper .preview {
+  margin-top: 1em;
+  box-shadow: inset 0px 1.25px 10px 0px #00000011;
+  width: 100%;
+  height: 50%;
+}
+
+.parameters .wrapper .palette {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+}
+
+.parameters .wrapper .palette>* {
+  flex: 0 1 auto;
+}
+
+.parameters .wrapper .palette>.preview {
+  flex: 1 1 auto;
+  margin: 1em 5px;
+  overflow-y: scroll;
+}

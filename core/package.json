@@ -1,0 +1,14 @@
+{
+  "name": "mm",
+  "main": "mcl.js",
+  "scripts": {
+    "mosaic": "node ./mcl.js",
+    "serve": "node ./serve.js",
+    "front": "npm start ./front",
+    "test": "jest --silent",
+    "debug": "node --nolazy ./mcl.js ./images/mona.jpg accordion 80 120"
+  },
+  "dependencies": {
+    "node-gd": "^2.1.1"
+  }
+}

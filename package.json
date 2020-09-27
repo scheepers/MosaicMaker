@@ -1,15 +1,7 @@
 {
-  "name": "mm",
-  "main": "mcl.js",
+  "name": "mmfront",
+  "main": "index.js",
   "scripts": {
-    "test": "jest --silent",
-    "debug": "node --nolazy ./core/mcl.js ./mona.jpg accordion 80 120",
-    "mosaic": "node ./mcl.js"
-  },
-  "dependencies": {
-    "node-gd": "^2.1.0"
-  },
-  "devDependencies": {
-    "jest": "^26.4.2"
+    "server": ""
   }
 }

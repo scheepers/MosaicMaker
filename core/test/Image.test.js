@@ -14,7 +14,7 @@ expect.extend(require('./varianceMatcher'))
 
 const
   Image = require('../Image'),
-  testDir = './core/test/images'
+  testDir = './test/palette'
 
 
 describe('Creating an Image',

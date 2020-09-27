@@ -17,7 +17,7 @@ jest.setTimeout(10000)
 const
   Image = require('../Image'),
   Palette = require('../Palette'),
-  testDir = './core/test/images',
+  testDir = './palette',
   testColors = {
     black: 0x000000,
     white: 0xFFFFFF,
