@@ -12,7 +12,7 @@ import ZoomOutIcon from '@material-ui/icons/ZoomOut'
 
 
 import './preview.css'
-import mona from '../mona.jpg'
+import mona from '../mona.mosaic.jpg'
 
 
 const marks = [
@@ -41,14 +41,12 @@ class Preview extends React.Component {
     const
       mosaicWidth = this.state.width * this.state.zoom / 100,
       mosaicHeight = this.state.height * this.state.zoom / 100,
-      mosaicLeftOffset = mosaicWidth / 2,
-      mosaicTopOffset = mosaicHeight / 2,
-
-      mosaicStyle = {
-        width: mosaicWidth,
-        marginTop: -mosaicTopOffset,
-        marginLeft: -mosaicLeftOffset
-    }
+      mosaicStye = this.state.width
+        ? {
+          width: mosaicWidth,
+          height: mosaicHeight
+        }
+        : {}
 
     return (
       <aside className={'preview ' + this.props.className}>
@@ -57,7 +55,7 @@ class Preview extends React.Component {
           <img
             className="mosaic"
             onLoad={this.onImageLoad}
-            style={mosaicStyle.width ? mosaicStyle : {}}
+            style={mosaicStye}
             src={mona}
             alt="Mosaic preview"
           />
